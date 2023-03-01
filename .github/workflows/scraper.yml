@@ -1,0 +1,13 @@
+name: jmeter
+on:
+  push:
+  schedule:
+  - cron: '30 18 * * *'
+  workflow_dispatch:
+jobs:
+   build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: run jmeter on github action
+        uses: sebiboga/run-jmeter-github-action@v0.0.4
